@@ -1,11 +1,12 @@
 'use strict';
+
 function hideTabContent() {
     // set up vars
     var i, tabcontent, tablinks;
 
     // Sets default CSS style --> display: none;
     tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length-1; i++) {
+    for (i = 0; i < tabcontent.length - 1; i++) {
         tabcontent[i].style.display = "none";
     }
 
@@ -28,14 +29,22 @@ function openCity(evt, cityName) {
 }
 
 function initTable() {
-    let table = document.querySelectorAll("table")
-    console.log(table)
+    let table = document.querySelectorAll(".tabcontent > table") // list all <tables>
 
-    for (let i=0; i < table.length; i++){
-        console.log(table[i]);
-        let t = table[i].classList;
-        console.log(t)
+    // Table Format
+    for (let i = 0; i < table.length; i++) {
+        let t = table[i].classList; // .classList returns the class in it >> "tabcontent w3-center"
+        // ADD THESE CLASSES TO IT
         t.add("w3-table-all");
         t.add("w3-hoverable");
+        t.add("w3-xlarge");
+    }
+    
+    let kanji = document.querySelectorAll(".kanji")
+    // Kanji Format
+    for (let i=0; i<kanji.length; i++) {
+        let k = kanji[i].classList;
+        k.add("w3-center")
+        k.add("h1")
     }
 }
