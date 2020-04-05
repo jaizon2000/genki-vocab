@@ -6,22 +6,22 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-<body onload='hideTabContent(), initTable()'>
+<body onload="format()">
     <h1>Genki Vocab App</h1>
 
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'l1')">Lesson 1</button>
-        <button class="tablinks" onclick="openCity(event, 'l2')">Lesson 2</button>
-        <button class="tablinks" onclick="openCity(event, 'l3')">Lesson 3</button>
-        <button class="tablinks" onclick="openCity(event, 'l4')">Lesson 4</button>
-        <button class="tablinks" onclick="openCity(event, 'l5')">Lesson 5</button>
-        <button class="tablinks" onclick="openCity(event, 'l6')">Lesson 6</button>
-        <button class="tablinks" onclick="openCity(event, 'l7')">Lesson 7</button>
-        <button class="tablinks" onclick="openCity(event, 'l8')">Lesson 8</button>
-        <button class="tablinks" onclick="openCity(event, 'l9')">Lesson 9</button>
-        <button class="tablinks" onclick="openCity(event, 'l10')">Lesson 10</button>
-        <button class="tablinks" onclick="openCity(event, 'l11')">Lesson 11</button>
-        <button class="tablinks" onclick="openCity(event, 'l12')">Lesson 12</button>
+        <button class="tablinks" onclick="openLesson('l1')">Lesson 1</button>
+        <button class="tablinks" onclick="openLesson('l2')">Lesson 2</button>
+        <button class="tablinks" onclick="openLesson('l3')">Lesson 3</button>
+        <button class="tablinks" onclick="openLesson('l4')">Lesson 4</button>
+        <button class="tablinks" onclick="openLesson('l5')">Lesson 5</button>
+        <button class="tablinks" onclick="openLesson('l6')">Lesson 6</button>
+        <button class="tablinks" onclick="openLesson('l7')">Lesson 7</button>
+        <button class="tablinks" onclick="openLesson('l8')">Lesson 8</button>
+        <button class="tablinks" onclick="openLesson('l9')">Lesson 9</button>
+        <button class="tablinks" onclick="openLesson('l10')">Lesson 10</button>
+        <button class="tablinks" onclick="openLesson('l11')">Lesson 11</button>
+        <button class="tablinks" onclick="openLesson('l12')">Lesson 12</button>
 
     </div>
 
@@ -62,7 +62,7 @@
         <table>
             <tr>
                 <th>Kanji</th>
-                <th>Meanings/Readings</th>
+                <th>Meanings & Readings</th>
                 <th>Examples</th>
             </tr>
         </table>
@@ -191,272 +191,277 @@
                     <br>大昔 (おおむかし) ancient times
                 </td>
             </tr>
+
+
+            <tr>
+                <td class="kanji">々</td>
+                <td>
+                    <p>(used for repetition of kanji)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>昔々 (むかしむかし) once upon a time
+                        <br>人々 (ひとびと) people
+                        <br>時々 (とおきどおき) sometimes
+
+                    </div>
+                    <div class="w3-col s6">
+                        <br>色々 (いろいろな) various
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="kanji">神</td>
+                <td class="reading">
+                    <br>▶ じん　しん　こう
+                    <br>▷ かみ
+                    <p>(God)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>神さま (かみさま) God
+                        <br>神道 (しんとう) Shinto religion
+                        <br>神戸市 (こうべし) Kobe City
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>神社 (じんじゃ) shrine
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="kanji">早</td>
+                <td class="reading">
+                    <br>▶ そう
+                    <br>▷ はや
+                    <p>(early)</p>
+                </td>
+                <td class="examples">
+                    <br>早い (はやい) early
+                    <br>早起きする (はやおきする) to get up early
+                    <br>早朝 (そうちょう) early morning
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">起</td>
+                <td class="reading">
+                    <br>▶ き
+                    <br>▷ お
+                    <p>(to get up)</p>
+                </td>
+
+                <td class="examples">
+                    <br>起きる (おきる) to get up
+                    <br>起こす (おこす) to wake someone up
+                    <br>起立する (きりつする) to stand up
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">牛</td>
+                <td class="reading">
+                    <br>▶ ぎゅう
+                    <br>▷ うし
+                    <p>(cow)</p>
+                </td>
+
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>牛 (うし) cow
+                        <br>牛乳 (ぎゅうにゅう) milk
+                        <br>子牛 (こうし) calf; veal
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>牛肉 (ぎゅうにく) beef
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="kanji">使</td>
+                <td class="reading">
+                    <br>▶ し
+                    <br>▷ つか
+                    <p>(to use)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>使う (つかう) to use
+                        <br>大使 (たいし) ambassador
+                        <br>お使い (おつかい) errand
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>使用中 (しようちゅう) "Occupied"
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="kanji">働</td>
+                <td class="reading">
+                    <br>▶ どう
+                    <br>▷ はたら　ばたら
+                    <p>(to work)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>働く (はたらく) to work
+                        <br>共働き (ともばたらき) both husband & wife working
+                        <br>労働 (ろうどう) labor
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">連</td>
+                <td class="reading">
+                    <br>▶ れん
+                    <br>▷ つ
+                    <p>(to link)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>連れて帰る (つれてかえる) to bring (a person) back
+                        <br>国連 (こくれん) United Nations
+                        <br>連休 (れんきゅう) consecutive holidays
+
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">別</td>
+                <td class="reading">
+                    <br>▶ べつ
+                    <br>▷ わか
+                    <p>to separate</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>別れる (わかれる) to separate
+                        <br>特別な (とくべつな) special
+                        <br>別々に (べつべつに) separately
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>別に (べつに) not in particular
+                        <br> (さべつ) discrimination
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">度</td>
+                <td class="reading">
+                    <br>▶ ど
+                    <p>(time; degrees)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>今度 (いちど) once
+                        <br>温度 (おんど) temperature
+                        <br>態度 (たいど) attitude
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>今度 (こんど) near future
+                        <br>三十度 (さんじゅうど) 30 degrees
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">赤</td>
+                <td class="reading">
+                    <br>▶ せき
+                    <br>▷ あか
+                    <p>(red)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>赤 (あか) red color
+                        <br>赤い (あかい) red
+                        <br>赤ちゃん (あかちゃん) baby
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>赤十字 (せきじゅうじ) the Red Cross
+                        <br>赤道 (せきどう) the equator
+
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td class="kanji">青</td>
+                <td class="reading">
+                    <br>▶ せい
+                    <br>▷ あお
+                    <p>(blue)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>青 (あお) blue color
+                        <br>青い (あおい) blue
+                        <br>青空 (あおぞら) blue sky
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>青信号 (あおしんご) green light
+                        <br>青年 (せいねん) youth
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td class="kanji">色</td>
+                <td class="reading">
+                    <br>▶ しき　しょく　
+                    <br>▷ いろ
+                    <p>(color)</p>
+                </td>
+                <td class="examples">
+                    <div class="w3-col s6">
+                        <br>色 (いろ) color
+                        <br>色い (いろいろな) various
+                        <br>色々な (とくしょく) characteristic
+                    </div>
+
+                    <div class="w3-col s6">
+                        <br>景色 (けしき) scenery
+                    </div>
+                </td>
+
+            </tr>
+        </table>
     </div>
 
-
-    <tr>
-        <td class="kanji">々</td>
-        <td>
-            <p>(used for repetition of kanji)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>昔々 (むかしむかし) once upon a time
-                <br>人々 (ひとびと) people
-                <br>時々 (とおきどおき) sometimes
-
-            </div>
-            <div class="w3-col s6">
-                <br>色々 (いろいろな) various
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="kanji">神</td>
-        <td class="reading">
-            <br>▶ じん　しん　こう
-            <br>▷ かみ
-            <p>(God)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>神さま (かみさま) God
-                <br>神道 (しんとう) Shinto religion
-                <br>神戸市 (こうべし) Kobe City
-            </div>
-
-            <div class="w3-col s6">
-                <br>神社 (じんじゃ) shrine
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="kanji">早</td>
-        <td class="reading">
-            <br>▶ そう
-            <br>▷ はや
-            <p>(early)</p>
-        </td>
-        <td class="examples">
-            <br>早い (はやい) early
-            <br>早起きする (はやおきする) to get up early
-            <br>早朝 (そうちょう) early morning
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">起</td>
-        <td class="reading">
-            <br>▶ き
-            <br>▷ お
-            <p>(to get up)</p>
-        </td>
-        
-        <td class="examples">
-            <br>起きる (おきる) to get up
-            <br>起こす (おこす) to wake someone up
-            <br>起立する (きりつする) to stand up
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">牛</td>
-        <td class="reading">
-            <br>▶ ぎゅう
-            <br>▷ うし
-            <p>(cow)</p>
-        </td>
-
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>牛 (うし) cow
-                <br>牛乳 (ぎゅうにゅう) milk
-                <br>子牛 (こうし) calf; veal
-            </div>
-
-            <div class="w3-col s6">
-                <br>牛肉 (ぎゅうにく) beef
-            </div>
-
-        </td>
-    </tr>
-
-    <tr>
-        <td class="kanji">使</td>
-        <td class="reading">
-            <br>▶ し
-            <br>▷ つか
-            <p>(to use)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>使う (つかう) to use
-                <br>大使 (たいし) ambassador
-                <br>お使い (おつかい) errand
-            </div>
-
-            <div class="w3-col s6">
-                <br>使用中 (しようちゅう) "Occupied"
-            </div>
-
-        </td>
-    </tr>
-
-    <tr>
-        <td class="kanji">働</td>
-        <td class="reading">
-            <br>▶ どう
-            <br>▷ はたら　ばたら
-            <p>(to work)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>働く (はたらく) to work
-                <br>共働き (ともばたらき) both husband & wife working
-                <br>労働 (ろうどう) labor
-            </div>
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">連</td>
-        <td class="reading">
-            <br>▶ れん
-            <br>▷ つ
-            <p>(to link)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>連れて帰る (つれてかえる) to bring (a person) back
-                <br>国連 (こくれん) United Nations
-                <br>連休 (れんきゅう) consecutive holidays
-
-            </div>
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">別</td>
-        <td class="reading">
-            <br>▶ べつ
-            <br>▷ わか
-            <p>to separate</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>別れる (わかれる) to separate
-                <br>特別な (とくべつな) special
-                <br>別々に (べつべつに) separately
-            </div>
-
-            <div class="w3-col s6">
-                <br>別に (べつに) not in particular
-                <br> (さべつ) discrimination
-            </div>
-
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">度</td>
-        <td class="reading">
-            <br>▶ ど
-            <p>(time; degrees)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>今度 (いちど) once
-                <br>温度 (おんど) temperature
-                <br>態度 (たいど) attitude
-            </div>
-
-            <div class="w3-col s6">
-                <br>今度 (こんど) near future
-                <br>三十度 (さんじゅうど) 30 degrees
-            </div>
-
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">赤</td>
-        <td class="reading">
-            <br>▶ せき
-            <br>▷ あか
-            <p>(red)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>赤 (あか) red color
-                <br>赤い (あかい) red
-                <br>赤ちゃん (あかちゃん) baby
-            </div>
-
-            <div class="w3-col s6">
-                <br>赤十字 (せきじゅうじ) the Red Cross
-                <br>赤道 (せきどう) the equator
-
-            </div>
-
-        </td>
-    </tr>
-
-    <tr>
-        <td class="kanji">青</td>
-        <td class="reading">
-            <br>▶ せい
-            <br>▷ あお
-            <p>(blue)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>青 (あお) blue color
-                <br>青い (あおい) blue
-                <br>青空 (あおぞら) blue sky
-            </div>
-
-            <div class="w3-col s6">
-                <br>青信号 (あおしんご) green light
-                <br>青年 (せいねん) youth
-            </div>
-
-        </td>
-
-    </tr>
-
-    <tr>
-        <td class="kanji">色</td>
-        <td class="reading">
-            <br>▶ しき　しょく　
-            <br>▷ いろ
-            <p>(color)</p>
-        </td>
-        <td class="examples">
-            <div class="w3-col s6">
-                <br>色 (いろ) color
-                <br>色い (いろいろな) various
-                <br>色々な (とくしょく) characteristic
-            </div>
-
-            <div class="w3-col s6">
-                <br>景色 (けしき) scenery
-            </div>
-        </td>
-
-    </tr>
-    </table>
     </div>
+
 
     <!--- JS SCRIPT --->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
     <script src="./main.js"></script>
+    <script src="lessons.js"></script>
+
 </body>
 
 </html>
