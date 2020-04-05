@@ -1,3 +1,4 @@
+'use strict';
 function hideTabContent() {
     // set up vars
     var i, tabcontent, tablinks;
