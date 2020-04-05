@@ -20,7 +20,7 @@ var l11 = [{
     {
         kanji: "",
         reading: {
-            onyomi: "",
+            // onyomi: "",
             kunyomi: ""
         },
         def: "()",
@@ -48,30 +48,48 @@ for (let lesson = 1; lesson <= 12; lesson++) {
     for (let i = 0; i < lsn.length; i++) {
 
         let d = lsn[i] // d=data
-        console.log('onyomi' in d.reading);
-        // console.log(lsn, d);
 
-        // let [onyomi, kunyomi] = checkReading(d.reading);
         let html = "<tr>"
+        html += '<td class="kanji">' + d.kanji + '</td>';
 
-        html +=
-            '<td class="kanji">' + d.kanji + '</td>' +
-            '<td class="reading">';
+        // READING
+        html += '<td class="reading">';
+        if ("onyomi" in d.reading) {
+            html += '<br>▶ ' + d.reading.onyomi;
+        }
+        if ("kunyomi" in d.reading) {
+            html += '<br>▷ ' + d.reading.kunyomi;
+        }
+        html += '<p>' + d.def + '</p></td>';
 
-        // if ("onyomi" in d.reading) {
-        //     html += '<br>▶ ' + d.onyomi;
-        // }
-        // if ("kunyomi" in d.reading) {
-        //     html += '<br>▷ ' + d.kunyomi;
-        // }
+        // EXAMPLES
+        /* 
+        KNOW LENGTH OF EXS
+        how many cols you need = Math.floor(length of example/3); >> cols_needed
+        find out size of cols = 12/cols_needed; >> col_size
+        class = "w3-col s"+ "col_size"
+        */
+        html += '<td class="examples">';
+        let cols_needed = Math.ceil(d.examples.length / 3);
+        let col_size = 12 / cols_needed;
+        let class_tag = "w3-col s" + col_size;
 
-        html +=
-            '<p>' + d.def + '</p></td>' +
-            '<td class="examples">';
+        let col = 0;
+        for (let i = 0; i < d.examples.length; i++) {
 
-        // for (let i = 0; i < d.examples.length; i++) {
-        //     $('.examples').append('<br>' + d.examples[i]);
-        // }
+            // ADD DIV COLS
+            if (col % 3 == 0) {
+                console.log("Hello")
+                html += '<div class="' + class_tag + '">';
+            }
+            col++;
+            // ADD EX TO COL
+            html += '<br>' + d.examples[i];
+            // CHECK AGAIN IF COL IS FULL
+            if (col % 3 == 0) {
+                html += '</div>';
+            }
+        }
         html += '</td>'
         $('#l11 table').append(html)
 
