@@ -1,32 +1,4 @@
 'use strict';
-var l11 = [{
-        kanji: "手",
-        reading: {
-            onyomi: "しゅ",
-            kunyomi: "て"
-        },
-        def: "(hand)",
-        examples: ["手紙 (てがみ) letter", "手 (て) hand", "上手な (じょうずな) good at", "歌手 (かしゅ) singer", "手話 (しゅわ) sign language"]
-    },
-    {
-        kanji: "紙",
-        reading: {
-            onyomi: "し",
-            kunyomi: "がみ　かみ"
-        },
-        def: "(paper)",
-        examples: ["手紙 (てがみ) letter", "紙 (かみ) paper", "表紙 (ひょうし) front cover", " (わし) Japanese paper"]
-    },
-    {
-        kanji: "",
-        reading: {
-            // onyomi: "",
-            kunyomi: ""
-        },
-        def: "()",
-        examples: [" () ", " () "]
-    }
-]
 
 function checkReading(d) {
     let onyomi = "";
@@ -85,7 +57,8 @@ for (let lesson = 1; lesson <= 12; lesson++) {
             col++;
             // ADD EX TO COL
             html += '<br>' + d.examples[i];
-            // CHECK AGAIN IF COL IS FULL
+
+            // CHECK IF COL IS FULL
             if (col % 3 == 0) {
                 html += '</div>';
             }
