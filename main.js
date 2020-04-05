@@ -4,11 +4,12 @@ function hideTabContent() {
 
     // Sets default CSS style --> display: none;
     tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
+    for (i = 0; i < tabcontent.length-1; i++) {
         tabcontent[i].style.display = "none";
     }
+
     // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks"); // returns list of elems of properties with class tablinks
+    tablinks = document.getElementsByClassName("tablinks"); // returns list
     //  console.log(tablinks)
 
     for (i = 0; i < tablinks.length; i++) {
