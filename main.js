@@ -25,3 +25,16 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function initTable() {
+    let table = document.querySelectorAll("table")
+    console.log(table)
+
+    for (let i=0; i < table.length; i++){
+        console.log(table[i]);
+        let t = table[i].classList;
+        console.log(t)
+        t.add("w3-table-all");
+        t.add("w3-hoverable");
+    }
+}
