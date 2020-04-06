@@ -50,8 +50,9 @@ for (let lesson = 1; lesson <= 12; lesson++) {
         for (let i = 0; i < d.examples.length; i++) {
 
             // ADD DIV COLS
-            if (col % 3 == 0) {
-                console.log("Hello")
+            if (cols_needed == 1) {
+                // pass
+            } else if (col % 3 == 0) {
                 html += '<div class="' + class_tag + '">';
             }
             col++;

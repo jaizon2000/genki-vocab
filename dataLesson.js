@@ -52,7 +52,7 @@ var l11 = [{
             kunyomi: "あか"
         },
         def: "(bright)",
-        examples: ["明るい (あかるい) cheerful; bright", "明日 (あした) tomorrow","発明 (はつめい) invention", "説明 (せつめい) explanation", "文明 (ぶんめい) civilization"]
+        examples: ["明るい (あかるい) cheerful; bright", "明日 (あした) tomorrow", "発明 (はつめい) invention", "説明 (せつめい) explanation", "文明 (ぶんめい) civilization"]
     }, {
         kanji: "病",
         reading: {
@@ -81,63 +81,63 @@ var l11 = [{
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(picture)",
+        examples: [" () ", " () ", " () "]
     }, {
         kanji: "歌",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(to sing)",
+        examples: [" () ", " () ", " () ", " () ", " () ", " () "]
     }, {
         kanji: "市",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(city)",
+        examples: [" () ", " () ", " () ", " () "]
     }, {
         kanji: "所",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(place)",
+        examples: [" () ", " () ", " () ", " () "]
     }, {
         kanji: "勉",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(to make efforts)",
+        examples: [" () ", " () ", " () "]
     }, {
         kanji: "強",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(strong)",
+        examples: [" () ", " () ", " () ", " () ", " () "]
     }, {
         kanji: "有",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(to exist)",
+        examples: [" () ", " () ", " () ", " () "]
     }, {
         kanji: "旅	",
         reading: {
             onyomi: "",
             kunyomi: ""
         },
-        def: "()",
-        examples: [" () ", " () "]
+        def: "(travel)",
+        examples: [" () ", " () ", " () ", " () "]
     }
 ]

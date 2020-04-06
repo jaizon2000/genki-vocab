@@ -8,3 +8,6 @@
     overflow: auto;
     text-overflow: clip;
 }
+.w3-col {
+    max-width: 100%;
+}
