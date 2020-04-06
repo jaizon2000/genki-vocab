@@ -1,7 +1,10 @@
 .kanji {
     font-size: 3em;
 }
+.examples div{
+    max-width: 100%;
+    padding-right: 50px;
 
-.hide {
-    display: none;
+    overflow: auto;
+    text-overflow: clip;
 }
