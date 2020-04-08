@@ -1,20 +1,5 @@
 'use strict';
 
-function checkReading(d) {
-    let onyomi = "";
-    let kunyomi = "";
-    if ("onyomi" in d.reading) {
-        onyomi += '<br>▶ ' + d.onyomi;
-    }
-    if ("kunyomi" in d.reading) {
-        kunyomi += '<br>▷ ' + d.kunyomi;
-    }
-
-    return [onyomi, kunyomi];
-}
-
-
-
 for (let lesson = 1; lesson <= 12; lesson++) {
     // Creates class tag for each lsn
     let lsn = eval("l" + lesson)
@@ -32,10 +17,10 @@ for (let lesson = 1; lesson <= 12; lesson++) {
         // READING
         html += '<td class="reading">';
         if ("onyomi" in d.reading) {
-            html += '<br>▶ ' + d.reading.onyomi;
+            html += '<br><span class="onyo">▶ ' + d.reading.onyomi+'</span>';
         }
         if ("kunyomi" in d.reading) {
-            html += '<br>▷ ' + d.reading.kunyomi;
+            html += '<br><span class="kunyo">▷ '+ d.reading.kunyomi+'</span>';
         }
         html += '<p>' + d.def + '</p></td>';
 
@@ -65,11 +50,11 @@ for (let lesson = 1; lesson <= 12; lesson++) {
 
             let example = d.examples[i];
 
-            example = example.replace(d.kanji, '<span id="' + id + '">' + d.kanji + '</span>');
+            // example = example.replace(d.kanji, '<span id="' + id + '">' + d.kanji + '</span>');
+            // example = example.replace(d.onyomi, '<span id="' + id + '">' + d.reading.onyomi + '</span>');         
+
+            example = example.replace(d.kanji, '<span class="'+id+'">' + d.kanji + '</span>');        
             console.log(example);
-
-
-
 
             // ADD EG TO COL
             html += '<br>' + example;

@@ -21,36 +21,42 @@ function openLesson(lesson) {
     $("#" + lesson).show();
 }
 
-$(document).ready(function () {
-    $(".kanji").hover(function () {
-        // GET ID OF CURRENT HOVERED KANJI
-        let id = '#' + $(this).attr("id");
-        $(">.kanji," + id).addClass("hover");
-
-    }, function () {
-        let id = '#' + $(this).attr("id");
-        $(">.kanji," + id).removeClass("hover");
-    });
-});
-
-
-function hovering(selector){
+// HOVERING FUNCTION
+function hovering(selector, attribute) {
     $(selector).hover(function () {
         // GET ID OF CURRENT HOVERED KANJI
-        let id = '#' + $(this).attr("id");
-        $(">"+selector+"," + id).addClass("hover");
+        $(this).addClass("hover");
+        let id = '.' + $(this).attr(attribute);
+        $(">.kanji," + id).addClass("hover");
+
 
     }, function () {
-        let id = '#' + $(this).attr("id");
-        $(">"+selector+"," + id).removeClass("hover");
+        $(this).removeClass("hover");
+        let id = '.' + $(this).attr(attribute);
+        $(">.kanji," + id).removeClass("hover");
     });
 };
 
+$(document).ready(function () {
+    // TO HOVER - KANJI
+    $('.kanji').hover(function () {
+        console.log(this.id);
+        hovering(".kanji", "id");
 
-// var str = '昔々 (むかしむかし) once upon a time';
-// var kanji_hiragana = /昔|むかし/g; 
-// var n = str.match(kanji_hiragana);
+    })
+ 
+    // TO HOVER - HIRAGANA
+    $('.kunyo').hover(function () {
+        console.log(this.class);
+        hovering(".kunyo", "class");
 
-// console.log(n);
-// if ($("td:contain(手)")) {
-//     $(this).css("color", "yellow");
+    })
+
+    $('.onyo').hover(function () {
+        console.log(this.class);
+        hovering(".onyo", "class");
+
+    })
+
+});
+
