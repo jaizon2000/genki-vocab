@@ -20,3 +20,37 @@ function openLesson(lesson) {
     $("#" + lesson).css("display", "block");
     $("#" + lesson).show();
 }
+
+$(document).ready(function () {
+    $(".kanji").hover(function () {
+        // GET ID OF CURRENT HOVERED KANJI
+        let id = '#' + $(this).attr("id");
+        $(">.kanji," + id).addClass("hover");
+
+    }, function () {
+        let id = '#' + $(this).attr("id");
+        $(">.kanji," + id).removeClass("hover");
+    });
+});
+
+
+function hovering(selector){
+    $(selector).hover(function () {
+        // GET ID OF CURRENT HOVERED KANJI
+        let id = '#' + $(this).attr("id");
+        $(">"+selector+"," + id).addClass("hover");
+
+    }, function () {
+        let id = '#' + $(this).attr("id");
+        $(">"+selector+"," + id).removeClass("hover");
+    });
+};
+
+
+// var str = '昔々 (むかしむかし) once upon a time';
+// var kanji_hiragana = /昔|むかし/g; 
+// var n = str.match(kanji_hiragana);
+
+// console.log(n);
+// if ($("td:contain(手)")) {
+//     $(this).css("color", "yellow");

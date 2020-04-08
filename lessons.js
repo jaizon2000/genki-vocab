@@ -16,13 +16,18 @@ function checkReading(d) {
 
 
 for (let lesson = 1; lesson <= 12; lesson++) {
+    // Creates class tag for each lsn
     let lsn = eval("l" + lesson)
-    for (let i = 0; i < lsn.length; i++) {
 
-        let d = lsn[i] // d=data
+    // for each kanji in a lesson,
+    for (let i = 0; i < lsn.length; i++) {
+        // data of A KANJI
+        let d = lsn[i]
 
         let html = "<tr>"
-        html += '<td class="kanji">' + d.kanji + '</td>';
+        // eg id = '11-0' << first kanji in lsn 11
+        let id = lesson + '-' + i
+        html += '<td class="kanji" id="' + id + '">' + d.kanji + '</td>';
 
         // READING
         html += '<td class="reading">';
@@ -56,8 +61,18 @@ for (let lesson = 1; lesson <= 12; lesson++) {
                 html += '<div class="' + class_tag + '">';
             }
             col++;
-            // ADD EX TO COL
-            html += '<br>' + d.examples[i];
+
+
+            let example = d.examples[i];
+
+            example = example.replace(d.kanji, '<span id="' + id + '">' + d.kanji + '</span>');
+            console.log(example);
+
+
+
+
+            // ADD EG TO COL
+            html += '<br>' + example;
 
             // CHECK IF COL IS FULL
             if (col % 3 == 0) {

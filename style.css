@@ -1,5 +1,6 @@
 .kanji {
     font-size: 3em;
+    font-weight: 900;
 }
 .examples div{
     max-width: 100%;
@@ -10,4 +11,11 @@
 }
 .w3-col {
     max-width: 100%;
+}
+.hover {
+    color: red;
+}
+td {
+    font-size: 1.3em;  
+    font-weight: 300;
 }
